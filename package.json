@@ -1,0 +1,25 @@
+{
+  "name": "webpagesandbox",
+  "version": "1.0.0",
+  "description": "sandbox web page for prototyping",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simpja/webPageSandbox.git"
+  },
+  "keywords": [
+    "node",
+    "sandbox",
+    "simple",
+    "web"
+  ],
+  "author": "simpja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simpja/webPageSandbox/issues"
+  },
+  "homepage": "https://github.com/simpja/webPageSandbox#readme"
+}
