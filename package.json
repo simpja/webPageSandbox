@@ -2,7 +2,7 @@
   "name": "webpagesandbox",
   "version": "1.0.0",
   "description": "sandbox web page for prototyping",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "test"
   },

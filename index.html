@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+
+    .modal_trigger {
+      position: fixed;
+      bottom: 1em;
+      right: 2em;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <img src="https://newcastlebeach.org/images/nice-tree-3.jpg" width="100%" />
+    <img
+      src="https://i.dlpng.com/static/png/4696117-computer-icons-online-chat-livechat-conversation-clip-art-chat-chat-png-900_520_preview.png"
+      class="modal_trigger"
+      width="100px"
+    />
+
+    <script src="https://partner20.boost.ai/chatPanel/chatPanel.js"></script>
+    <script type="application/javascript">
+      // Create chat panel
+      var chatPanel = window.boostChatPanel({
+        apiUrlBase: "https://partner20.boost.ai/api",
+        pace: "supersonic"
+      });
+
+      // Open the chat panel on load
+      chatPanel.show();
+
+      // Open panel on click
+      document
+        .querySelector(".modal_trigger")
+        .addEventListener("click", function() {
+          chatPanel.show();
+        });
+    </script>
+  </body>
+</html>
