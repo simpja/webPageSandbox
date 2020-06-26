@@ -55,12 +55,10 @@ if (chatButton) {
   chatButton.addEventListener("click", function () {
     chatPanel.show();
   });
-  let currentWindowWidth =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-  if (!(currentWindowWidth < 768)) {
-    chatPanel.show();
-  }
+
   chatButton.className = chatButtonEnabledClass;
+}
+
+function hideChat() {
+  chatPanel.minimize();
 }
