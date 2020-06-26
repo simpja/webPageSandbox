@@ -1,4 +1,3 @@
-/*
 // Create chat panel
 var chatPanel = window.boostChatPanel({
   apiUrlBase: "https://partner20.boost.ai/api",
@@ -12,4 +11,3 @@ chatPanel.show();
 document.querySelector(".modal_trigger").addEventListener("click", function () {
   chatPanel.show();
 });
-*/
