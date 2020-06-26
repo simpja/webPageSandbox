@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+
+  <link rel="stylesheet" type="text/css" href="/assets/common-style.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/header-style.css" />
+  <body>
+    <header>
+      <div class="header">
+        <a href="../home/index.html" class="logo">Avo Sandbox</a>
+        <div class="header-right">
+          <a class="active" href="../home/index.html">Home</a>
+          <a href="../about/index.html">About</a>
+        </div>
+      </div>
+    </header>
+    <h1>Home</h1>
+
+    <img
+      src="https://i.dlpng.com/static/png/4696117-computer-icons-online-chat-livechat-conversation-clip-art-chat-chat-png-900_520_preview.png"
+      class="modal_trigger"
+      width="100px"
+    />
+
+    <script src="https://partner20.boost.ai/chatPanel/chatPanel.js"></script>
+    <script type="application/javascript">
+      // Create chat panel
+      var chatPanel = window.boostChatPanel({
+        apiUrlBase: "https://partner20.boost.ai/api",
+        pace: "supersonic",
+      });
+
+      // Open the chat panel on load
+      chatPanel.show();
+
+      // Open panel on click
+      document
+        .querySelector(".modal_trigger")
+        .addEventListener("click", function () {
+          chatPanel.show();
+        });
+    </script>
+  </body>
+</html>

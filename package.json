@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/simpja/webPageSandbox/issues"
   },
-  "homepage": "https://github.com/simpja/webPageSandbox#readme"
+  "homepage": "https://github.com/simpja/webPageSandbox#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

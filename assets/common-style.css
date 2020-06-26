@@ -1,0 +1,13 @@
+body {
+  background-image: url("https://newcastlebeach.org/images/nice-tree-3.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal_trigger {
+  position: fixed;
+  bottom: 1em;
+  right: 2em;
+  cursor: pointer;
+}

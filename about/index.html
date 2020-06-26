@@ -6,20 +6,19 @@
     name="viewport"
     content="width=device-width, initial-scale=1, user-scalable=no"
   />
-  <style type="text/css">
-    body {
-      margin: 0;
-    }
-
-    .modal_trigger {
-      position: fixed;
-      bottom: 1em;
-      right: 2em;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="/assets/common-style.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/header-style.css" />
   <body>
-    <img src="https://newcastlebeach.org/images/nice-tree-3.jpg" width="100%" />
+    <header>
+      <div class="header">
+        <a href="../home/index.html" class="logo">Avo Sandbox</a>
+        <div class="header-right">
+          <a href="../home/index.html">Home</a>
+          <a class="active" href="../about/index.html">About</a>
+        </div>
+      </div>
+    </header>
+    <h1>About</h1>
     <img
       src="https://i.dlpng.com/static/png/4696117-computer-icons-online-chat-livechat-conversation-clip-art-chat-chat-png-900_520_preview.png"
       class="modal_trigger"
@@ -31,7 +30,7 @@
       // Create chat panel
       var chatPanel = window.boostChatPanel({
         apiUrlBase: "https://partner20.boost.ai/api",
-        pace: "supersonic"
+        pace: "supersonic",
       });
 
       // Open the chat panel on load
@@ -40,7 +39,7 @@
       // Open panel on click
       document
         .querySelector(".modal_trigger")
-        .addEventListener("click", function() {
+        .addEventListener("click", function () {
           chatPanel.show();
         });
     </script>
