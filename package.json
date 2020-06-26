@@ -4,7 +4,8 @@
   "description": "sandbox web page for prototyping",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
