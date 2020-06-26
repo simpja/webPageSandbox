@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
-const port = 3000;
+const port = process.env.PORT || 3000;
 const path = require("path");
 const router = express.Router();
 // const routes = require("./routes/index");
@@ -29,6 +29,6 @@ app.use("/assets", express.static(__dirname + "/assets/"));
 
 app.use("/", router);
 
-http.listen(port, function () {
+http.listen(port, "0.0.0.0", function () {
   console.log(`listening on: ${port}`);
 });
