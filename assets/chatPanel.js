@@ -26,26 +26,31 @@ let chatPanel = boostChatPanel({
   pace: "supersonic",
 });
 
-chatPanel.addEventListener("conversationIdChanged", function (event) {
-  sessionStorage.setItem(conversationIdKeyName, event.detail.conversationId);
-});
+function main() {
+  if (
+    conversationStartedTimeStamp &&
+    Date.now() - Number(conversationStartedTimestamp) >= dayInMilliseconds
+  ) {
+    sessionStorage.removeItem(conversationIdKeyName);
+    sessionStorage.removeItem(conversationStartedTimestampKeyName);
+  }
+}
+
 // Get the conversationStartedTimeStamp from sessionStorage if it exists.
 const conversationStartedTimestamp = sessionStorage.getItem(
   conversationStartedTimestampKeyName
 );
+console.log(`conversationStarted: ${conversationStartedTimestamp}`);
 const dayInMilliseconds = 86400000;
 // If we have a timestamp and the timestamp is older than a day, clear the conversation.
-if (
-  conversationStartedTimeStamp &&
-  Date.now() - Number(conversationStartedTimestamp) >= dayInMilliseconds
-) {
-  sessionStorage.removeItem(conversationIdKeyName);
-  sessionStorage.removeItem(conversationStartedTimestampKeyName);
-}
+
+/*
 chatPanel.addEventListener("conversationIdChanged", function (event) {
   sessionStorage.setItem(conversationIdKeyName, event.detail.conversationId);
   sessionStorage.setItem(conversationStartedTimestampKeyName, Date.now());
 });
+*/
+
 if (chatButton) {
   chatButton.addEventListener("click", function () {
     chatPanel.show();
