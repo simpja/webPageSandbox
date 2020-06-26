@@ -10,13 +10,11 @@ var chatPanel = window.boostChatPanel({
 // chatPanel.show();
 
 // Open panel on click
+/*
 document.querySelector(".modal_trigger").addEventListener("click", function () {
   chatPanel.show();
 });
-
-chatPanel.addEventListener("conversationIdChanged", function (event) {
-  sessionStorage.setItem(conversationIdKeyName, event.detail.conversationId);
-});
+*/
 let chatButtonEnabledClass = "boostAiChatButtonEnabled";
 let chatButtonId = "#boostAiChatButton";
 let conversationIdKeyName = "boostAiChatId";
@@ -26,6 +24,10 @@ let chatPanel = boostChatPanel({
   apiUrlBase: "https://partner20.boost.ai/api",
   conversationId: sessionStorage.getItem(conversationIdKeyName),
   pace: "supersonic",
+});
+
+chatPanel.addEventListener("conversationIdChanged", function (event) {
+  sessionStorage.setItem(conversationIdKeyName, event.detail.conversationId);
 });
 // Get the conversationStartedTimeStamp from sessionStorage if it exists.
 const conversationStartedTimestamp = sessionStorage.getItem(
