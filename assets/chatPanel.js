@@ -1,10 +1,7 @@
-// Open the chat panel on load
-chatPanel.show();
-
 // Open panel on click
 /*
 document.querySelector(".modal_trigger").addEventListener("click", function () {
-  chatPanel.show();
+    chatPanel.show();
 });
 */
 let chatButtonEnabledClass = "boostAiChatButtonEnabled";
@@ -17,6 +14,9 @@ let chatPanel = boostChatPanel({
   conversationId: sessionStorage.getItem(conversationIdKeyName),
   pace: "supersonic",
 });
+
+// Open the chat panel on load
+chatPanel.show();
 
 function main() {
   if (
