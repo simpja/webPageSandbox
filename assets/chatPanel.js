@@ -4,6 +4,7 @@ document.querySelector(".modal_trigger").addEventListener("click", function () {
     chatPanel.show();
 });
 */
+let chatPanelShown = false;
 let chatButtonEnabledClass = "boostAiChatButtonEnabled";
 let chatButtonId = "#boostAiChatButton";
 let conversationIdKeyName = "boostAiChatId";
@@ -17,6 +18,7 @@ let chatPanel = boostChatPanel({
 
 // Open the chat panel on load
 chatPanel.show();
+chatPanelShown = true;
 
 function main() {
   if (
@@ -44,7 +46,13 @@ chatPanel.addEventListener("conversationIdChanged", function (event) {
 
 if (chatButton) {
   chatButton.addEventListener("click", function () {
-    chatPanel.show();
+    if (chatPanelShown) {
+      chatPanel.minimize();
+      chatPanelShown = false;
+    } else if (!chatPanelShown) {
+      chatPanel.show();
+      chatPanelShown = true;
+    }
   });
 
   chatButton.className = chatButtonEnabledClass;
@@ -52,4 +60,5 @@ if (chatButton) {
 
 function hideChat() {
   chatPanel.minimize();
+  chatPanelShown = false;
 }
