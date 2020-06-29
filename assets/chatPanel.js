@@ -44,12 +44,11 @@ console.log(`conversationStarted: ${conversationStartedTimestamp}`);
 const dayInMilliseconds = 86400000;
 // If we have a timestamp and the timestamp is older than a day, clear the conversation.
 
-/*
 chatPanel.addEventListener("conversationIdChanged", function (event) {
+  console.log("ConverstationIDChanged");
   sessionStorage.setItem(conversationIdKeyName, event.detail.conversationId);
   sessionStorage.setItem(conversationStartedTimestampKeyName, Date.now());
 });
-*/
 
 if (chatButton) {
   chatButton.addEventListener("click", function () {

@@ -11,3 +11,7 @@ body {
   right: 2em;
   cursor: pointer;
 }
+
+.boostAiChatButtonEnabled {
+  border: 5px solid #ddd;
+}
