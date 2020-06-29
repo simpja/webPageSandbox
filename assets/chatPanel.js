@@ -1,9 +1,3 @@
-// Open panel on click
-/*
-document.querySelector(".modal_trigger").addEventListener("click", function () {
-    chatPanel.show();
-});
-*/
 let chatPanelShown = false;
 let chatButtonEnabledClass = "boostAiChatButtonEnabled";
 let chatButtonId = "#boostAiChatButton";
@@ -49,16 +43,11 @@ if (chatButton) {
     if (chatPanelShown) {
       chatPanel.minimize();
       chatPanelShown = false;
+      chatButton.classList.toggle(chatButtonEnabledClass);
     } else if (!chatPanelShown) {
       chatPanel.show();
       chatPanelShown = true;
+      chatButton.classList.toggle(chatButtonEnabledClass);
     }
   });
-
-  chatButton.className = chatButtonEnabledClass;
-}
-
-function hideChat() {
-  chatPanel.minimize();
-  chatPanelShown = false;
 }
