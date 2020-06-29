@@ -16,3 +16,12 @@ body {
   border: 5px solid #ddd;
   opacity: 0.5;
 }
+
+#page-info {
+  background-color: rgba(233, 241, 222, 0.8);
+
+  width: fit-content;
+  padding: 5px;
+
+  font-size: larger;
+}

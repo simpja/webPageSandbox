@@ -11,12 +11,6 @@ let chatPanel = boostChatPanel({
   pace: "supersonic",
 });
 
-// Open the chat panel on load
-chatPanel.show();
-chatPanelShown = true;
-
-// function main() {}
-
 // Get the conversationStartedTimeStamp from sessionStorage if it exists.
 const conversationStartedTimestamp = sessionStorage.getItem(
   conversationStartedTimestampKeyName
@@ -37,6 +31,10 @@ chatPanel.addEventListener("conversationIdChanged", function (event) {
   sessionStorage.setItem(conversationIdKeyName, event.detail.conversationId);
   sessionStorage.setItem(conversationStartedTimestampKeyName, Date.now());
 });
+
+// Open the chat panel on load
+chatPanel.show();
+chatPanelShown = true;
 
 if (chatButton) {
   chatButton.addEventListener("click", function () {
