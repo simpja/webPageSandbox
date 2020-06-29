@@ -3,6 +3,7 @@ let chatButtonEnabledClass = "boostAiChatButtonEnabled";
 let chatButtonId = "#boostAiChatButton";
 let conversationIdKeyName = "boostAiChatId";
 let conversationStartedTimestampKeyName = "boostAiChatTimestamp";
+let conversationStartedTimestamp = "";
 let chatButton = document.querySelector(chatButtonId);
 let chatPanel = boostChatPanel({
   apiUrlBase: "https://partner20.boost.ai/api",
@@ -17,14 +18,14 @@ chatPanelShown = true;
 // function main() {}
 
 // Get the conversationStartedTimeStamp from sessionStorage if it exists.
-const conversationStartedTimestamp = sessionStorage.getItem(
+conversationStartedTimestamp = sessionStorage.getItem(
   conversationStartedTimestampKeyName
 );
 const dayInMilliseconds = 86400000;
 
 // If we have a timestamp and the timestamp is older than a day, clear the conversation.
 if (
-  conversationStartedTimeStamp &&
+  conversationStartedTimeStamp != "" &&
   Date.now() - Number(conversationStartedTimestamp) >= dayInMilliseconds
 ) {
   sessionStorage.removeItem(conversationIdKeyName);
