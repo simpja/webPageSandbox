@@ -14,6 +14,7 @@ let chatPanel = boostChatPanel({
 // Open the chat panel on load
 chatPanel.show();
 chatPanelShown = true;
+console.log("ny versjon");
 
 // function main() {}
 
