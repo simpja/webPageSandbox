@@ -16,7 +16,7 @@ const conversationStartedTimestamp = sessionStorage.getItem(
   conversationStartedTimestampKeyName
 );
 
-// If we have a timestamp and the timestamp is older than a day, clear the conversation.
+// If we have a timestamp and the timestamp is older than a day, clear the conversation
 if (
   conversationStartedTimestamp &&
   Date.now() - Number(conversationStartedTimestamp) >= dayInMilliseconds
