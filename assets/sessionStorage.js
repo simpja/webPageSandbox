@@ -15,18 +15,18 @@ names = [
 // Take a random number between 0 and 9
 randomInt = Math.floor(Math.random() * 10);
 
-// check the value of sessionStorage before it is set:
-currentSession = sessionStorage.getItem("name");
-console.log(currentSession);
-
 // Fetch one of these names, and set it as sessionStorage.name
 // Store item:
 // sessionStorage.setItem("name", names[randomInt]);
 // retrieve:
-function updateNameOnPage() {
-  document.getElementById("span-name").innerHTML = sessionStorage.getItem(
-    "name"
-  );
+async function updateNameOnPage() {
+  var name = await sessionStorage.getItem("name");
+  if (name != null) {
+    document.getElementById("span-name").innerHTML = name;
+    return;
+  } else {
+    document.getElementById("span-name").innerHTML = "anonym";
+  }
 }
 
 function setName(name) {
