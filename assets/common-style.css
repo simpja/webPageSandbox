@@ -1,8 +1,14 @@
+@font-face {
+  font-family: avoFont;
+  src: url("fonts/avoFont.otf") format("opentype");
+}
+
 body {
-  background-image: url("https://newcastlebeach.org/images/nice-tree-3.jpg");
+  background-image: url("img/background2.jpg");
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: avoFont;
 }
 
 .modal_trigger {
@@ -16,10 +22,12 @@ body {
   border: 5px solid #ddd;
   opacity: 0.5;
 }
-
+.content {
+  background-color: rgba(17, 119, 82, 0.9);
+  padding: 20px;
+  width: 40%;
+}
 #page-info {
-  background-color: rgba(233, 241, 222, 0.8);
-
   width: fit-content;
   padding: 5px;
 

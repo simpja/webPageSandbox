@@ -11,45 +11,53 @@
   <body>
     <header>
       <div class="header">
-        <a href="../home/index.html" class="logo">Avo Sandbox</a>
+        <a href="../home/index.html" class="logo"
+          ><input
+            type="image"
+            src="/assets/img/logoSand.png"
+            alt="logo"
+            width="220"
+            height="100"
+        /></a>
         <div class="header-right">
           <a href="../home/index.html">Home</a>
           <a class="active" href="../about/index.html">About</a>
         </div>
       </div>
     </header>
-    <h1>About</h1>
-    <div id="page-info">
-      <p>
-        This website showcases the functionality of Session Variables.
-      </p>
-      <ol>
-        <li>Enter your name</li>
-        <li>Press the Update button below</li>
-        <li>Try navigating to the home tab and back</li>
-        <li>
-          Try navigating to another website and return here using the same
-          browser tab
-        </li>
-        <li>Try to open the same page in another tab</li>
-      </ol>
+    <div class="content">
+      <h1>About</h1>
+      <div id="page-info">
+        <p>
+          This website showcases the functionality of Session Variables.
+        </p>
+        <ol>
+          <li>Enter your name</li>
+          <li>Press the Update button below</li>
+          <li>Try navigating to the home tab and back</li>
+          <li>
+            Try navigating to another website and return here using the same
+            browser tab
+          </li>
+          <li>Try to open the same page in another tab</li>
+        </ol>
+      </div>
+      <h2>
+        Hello
+        <span id="span-name">updating...</span>
+      </h2>
+      <input type="text" id="myName" value="Your name..." />
+
+      <p>Click the "Update" button to update your name.</p>
+
+      <button onclick="nameUpdate()">Update!</button>
+      <img
+        src="../assets/img/chatBtn.png"
+        id="boostAiChatButton"
+        class="modal_trigger"
+        width="100px"
+      />
     </div>
-    <h2>
-      Hello
-      <span id="span-name">updating...</span>
-    </h2>
-    <input type="text" id="myName" value="Your name..." />
-
-    <p>Click the "Update" button to update your name.</p>
-
-    <button onclick="nameUpdate()">Update!</button>
-    <img
-      src="../assets/img/chatBtn.png"
-      id="boostAiChatButton"
-      class="modal_trigger"
-      width="100px"
-    />
-
     <script src="https://partner20.boost.ai/chatPanel/chatPanel.js"></script>
     <script src="/assets/chatPanel.js"></script>
 
