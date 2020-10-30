@@ -9,6 +9,21 @@
 
   <link rel="stylesheet" type="text/css" href="/assets/common-style.css" />
   <link rel="stylesheet" type="text/css" href="/assets/header-style.css" />
+  <!-- This loads Intelcoms default light-colored stylesheet -->
+  <link
+    rel="stylesheet"
+    title="IntelecomChatCustomCss"
+    href="https://chat.puzzel.com/Content/Client/css/intelecom-light.css"
+    type="text/css"
+  />
+  <!-- customize buttons and header from the puzzle html-file -->
+  <style>
+    .intelecomchatstarter {
+      border: 4px solid #eb1562;
+      width: 80px;
+      height: 80px;
+    }
+  </style>
   <body>
     <header>
       <div class="header">
@@ -34,13 +49,39 @@
         <span id="span-name">updating...</span>
       </h2>
     </display>
+    <div id="someID" class="intelecomchat"></div>
+    <!--
+      <img
+        src="../assets/img/chatBtn.png"
+        id="boostAiChatButton"
+        class="modal_trigger"
+        width="100px"
+      />
+    -->
 
-    <img
-      src="../assets/img/chatBtn.png"
-      id="boostAiChatButton"
-      class="modal_trigger"
-      width="100px"
-    />
+    <!-- This loads jquery if you don’t already have it installed -->
+    <script src="https://chat.puzzel.com/Content/Client/js/jquery-latest.min.js"></script>
+    <!-- This loads Intelecoms third party libraries -->
+    <script src="https://chat.puzzel.com/Content/Client/js/jquery-intelecomchat.libs.latest.min.js"></script>
+
+    <!--/----------------------------------------------------------------------------/-->
+    <!-- This loads Intelecoms chat code -->
+    <script src="https://chat.puzzel.com/Content/Client/js/jquery-intelecomchat.latest.min.js"></script>
+
+    <!--/----------------------------------------------------------------------------/-->
+
+    <script>
+      $(document).ready(function () {
+        $("#someID").intelecomChat({
+          /*
+                      mandatory parameters
+                      */
+          customerKey: "900147",
+          configurationId: "6e351acc-2cd1-499d-97f7-1a015a325cdb",
+          showForm: true,
+        });
+      });
+    </script>
 
     <script src="https://partner20.boost.ai/chatPanel/chatPanel.js"></script>
     <script src="/assets/chatPanel.js"></script>
