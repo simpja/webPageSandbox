@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes,height=device-height" />
+
+    <!--/----------------------------------------------------------------------------/-->
+
+    <!-- This loads Intelcoms default light-colored stylesheet -->
+    <link rel="stylesheet" title="IntelecomChatCustomCss" href="https://chat.puzzel.com/Content/Client/css/intelecom-light.css" type="text/css" />
+        
+    <!-- This loads Intelcoms default dark-colored stylesheet -->
+    <!-- link rel="stylesheet" title="IntelecomChatCustomCss" href="https://chat.puzzel.com/Content/Client/css/intelecom-gray.css" type="text/css" /-->
+        <!--/----------------------------------------------------------------------------/-->
+
+    <!-- This loads jquery if you don’t already have it installed -->
+    <!--[if gte IE 9]><!-->
+    <script src="https://chat.puzzel.com/Content/Client/js/jquery-latest.min.js"></script>
+    <!--<![endif]-->
+
+    <!-- This loads jquery for IE lower than 9 if you don’t already have it -->
+    <!--[if lt IE 9]>
+       <script src="https://chat.puzzel.com/Content/Client/js/jquery-1.11.2.min.js"></script>
+    <![endif]-->
+  
+    <!--/----------------------------------------------------------------------------/-->
+
+    <!-- This loads Intelecoms third party libraries -->
+    <script src="https://chat.puzzel.com/Content/Client/js/jquery-intelecomchat.libs.latest.min.js"></script>
+
+    <!--/----------------------------------------------------------------------------/-->
+    <!-- This loads Intelecoms chat code -->
+    <script src="https://chat.puzzel.com/Content/Client/js/jquery-intelecomchat.latest.min.js"></script>
+
+    <!--/----------------------------------------------------------------------------/-->
+    
+	<!-- customize buttons and header-->
+	<style>	 .intelecomchatstarter {border: 4px solid #eb1562; width: 80px; height: 80px;}</style>
+    <!--style>
+		 .intelecomchatheader {background-color:#eb1562;}
+		 .intelecomchat__button {background:#eb1562;}
+		 .intelecomchatdialog {height: 450px;}
+		 .intelecomStarterRight {right: -5px;}
+	</style-->
+    
+    </head>
+<body>
+ 
+<div id="someID" class="intelecomchat"></div>
+
+     <script>
+        $(document).ready(function() {
+            $('#someID').intelecomChat({
+                        /*
+                        mandatory parameters
+                        */
+						customerKey: '900147',
+                        configurationId: '6e351acc-2cd1-499d-97f7-1a015a325cdb',
+						showForm: true
+                    });
+        });
+    </script>
+
+</body>
+</html> 
