@@ -2,6 +2,7 @@ let chatPanelShown = false;
 let chatButtonEnabledClass = "boostAiChatButtonEnabled";
 let chatButtonId = "#boostAiChatButton";
 let chatButton = document.querySelector(chatButtonId);
+let avoChatLabel = document.querySelector("#AvoChatLabel");
 const dayInMilliseconds = 86400000;
 let conversationIdKeyName = "boostAiChatId";
 let conversationStartedTimestampKeyName = "boostAiChatTimestamp";
@@ -31,10 +32,16 @@ chatPanel.addEventListener("conversationIdChanged", function (event) {
   sessionStorage.setItem(conversationStartedTimestampKeyName, Date.now());
 });
 
+function flashText() {
+  //console.log(avoChatLabel);
+  avoChatLabel.classList.toggle("flash");
+}
+
 chatPanel.addEventListener("testEmitter", function (event) {
   console.log("Emit some event from the chatPanel");
   const { detail } = event;
   console.log(detail);
+  flashText();
 });
 
 // Open the chat panel on load
