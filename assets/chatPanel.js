@@ -31,6 +31,12 @@ chatPanel.addEventListener("conversationIdChanged", function (event) {
   sessionStorage.setItem(conversationStartedTimestampKeyName, Date.now());
 });
 
+chatPanel.addEventListener("testEmitter", function (event) {
+  console.log("Emit some event from the chatPanel");
+  const { detail } = event;
+  console.log(detail);
+});
+
 // Open the chat panel on load
 chatPanel.show();
 chatPanelShown = true;
