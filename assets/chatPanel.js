@@ -39,7 +39,8 @@ function flashText() {
 
 function changeFilter(filter) {
   if (filter == "Privat" || filter == "Bedrift") {
-    chatPanel.setFilterValues([`${filter}`]);
+    // chatPanel.setFilterValues([`${filter}`]);
+    chatPanel.setFilterValues(["Privat", "Bedrift"]);
     console.log(`Filter was changed to ${filter}!`);
   }
 }
