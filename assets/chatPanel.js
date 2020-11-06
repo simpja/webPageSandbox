@@ -37,6 +37,13 @@ function flashText() {
   avoChatLabel.classList.toggle("flash");
 }
 
+function changeFilter(filter) {
+  if (filter == "Privat" || filter == "Bedrift") {
+    chatPanel.setFilterValues([`${filter}`]);
+    console.log(`Filter was changed to ${filter}!`);
+  }
+}
+
 chatPanel.addEventListener("testEmitter", function (event) {
   console.log("Emit some event from the chatPanel");
   const { detail } = event;
