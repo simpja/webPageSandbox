@@ -8,6 +8,7 @@ let conversationIdKeyName = "boostAiChatId";
 let conversationStartedTimestampKeyName = "boostAiChatTimestamp";
 let chatPanel = boostChatPanel({
   apiUrlBase: "https://partner20.boost.ai/api",
+  filterValues: ["Privat", "Bedrift"],
   conversationId: sessionStorage.getItem(conversationIdKeyName),
   pace: "supersonic",
 });
@@ -38,9 +39,9 @@ function flashText() {
 }
 
 function changeFilter(filter) {
+  chatPanel.setFilterValues([`${filter}`]);
   if (filter == "Privat" || filter == "Bedrift") {
-    // chatPanel.setFilterValues([`${filter}`]);
-    chatPanel.setFilterValues(["Privat", "Bedrift"]);
+    //chatPanel.setFilterValues(["Privat", "Bedrift"]);
     console.log(`Filter was changed to ${filter}!`);
   }
 }
