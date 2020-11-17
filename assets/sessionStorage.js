@@ -2,7 +2,9 @@
 
 async function updateNameOnPage() {
   var name = await sessionStorage.getItem("name");
-  if (name != null) {
+  if (document.getElementById("span-name") === null) {
+    return;
+  } else if (name != null) {
     document.getElementById("span-name").innerHTML = name;
     return;
   } else {
