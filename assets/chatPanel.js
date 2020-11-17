@@ -11,6 +11,8 @@ let chatPanel = boostChatPanel({
   filterValues: "uio_knutepunktet",
   conversationId: sessionStorage.getItem(conversationIdKeyName),
   pace: "supersonic",
+  title: "Avo Partner 20",
+  startTriggerActionId: 3370,
 });
 
 // Get the conversationStartedTimeStamp from sessionStorage if it exists.
