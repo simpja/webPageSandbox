@@ -10,15 +10,18 @@
   <link rel="stylesheet" type="text/css" href="/assets/common-style.css" />
   <link rel="stylesheet" type="text/css" href="/assets/header-style.css" />
 
-  <!-- This loads Intelcoms default light-colored stylesheet -->
+  <!-- Here comes to stylesheets related to the puzzle demo -->
+  <!-- First is to load Intelcoms default light-colored stylesheet -->
+  <!-- Second is to customize buttons and header from the puzzle html-file -->
+  <!--
   <link
     rel="stylesheet"
     title="IntelecomChatCustomCss"
     href="https://chat.puzzel.com/Content/Client/css/intelecom-light.css"
     type="text/css"
   />
-  <!-- customize buttons and header from the puzzle html-file -->
   <link rel="stylesheet" type="text/css" href="/assets/puzzle.css" />
+  -->
 
   <body>
     <header>
@@ -40,10 +43,6 @@
     <display>
       <h1 id="AvoChatLabel">AvoChat</h1>
       <h2>Testchat for partner20</h2>
-      <h2>
-        Hei
-        <span id="span-name">updating...</span>
-      </h2>
     </display>
 
     <img
@@ -58,17 +57,16 @@
     <!-- Second loads Intelecoms third party libraries -->
     <!-- Third loads Intelecoms chat code -->
     <!-- Fourth loads the puzzle chatpanel-->
-
+    <!--
     <div id="someID" class="intelecomchat"></div>
     <script src="https://chat.puzzel.com/Content/Client/js/jquery-latest.min.js"></script>
     <script src="https://chat.puzzel.com/Content/Client/js/jquery-intelecomchat.libs.latest.min.js"></script>
     <script src="https://chat.puzzel.com/Content/Client/js/jquery-intelecomchat.latest.min.js"></script>
     <script src="/assets/puzzle.js"></script>
-
+-->
+    <!-- Scripts for chatpanel from Boost.ai, to load and initialize the chatpanel, and funcitons to fasilitate the sessionStorage demo -->
     <script src="https://partner20.boost.ai/chatPanel/chatPanel.js"></script>
     <script src="/assets/chatPanel.js"></script>
-
     <script src="/assets/sessionStorage.js"></script>
-    <script type="application/javascript"></script>
   </body>
 </html>

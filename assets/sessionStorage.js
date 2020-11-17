@@ -1,4 +1,5 @@
-// make a list of 10 names:
+// Here follows functions that let you use the sessionStorage to set and retrieve a parameter name to demo this functionality
+
 async function updateNameOnPage() {
   var name = await sessionStorage.getItem("name");
   if (name != null) {
@@ -8,7 +9,6 @@ async function updateNameOnPage() {
     document.getElementById("span-name").innerHTML = "anonym";
   }
 }
-
 function setName(name) {
   sessionStorage.setItem("name", name);
 }
