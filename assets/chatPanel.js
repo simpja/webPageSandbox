@@ -48,10 +48,13 @@ function changeFilter(filter) {
   }
 }
 
-chatPanel.addEventListener("testEmitter", function (event) {
-  console.log("Emit some event from the chatPanel");
+chatPanel.addEventListener("changeFilterEvent", function (event) {
+  console.log("Filter change event emitted from chat user");
   const { detail } = event;
-  console.log(detail);
+  if (detail.filter != undefined) {
+    chatPanel.setFilterValues(detail.filter);
+    console.log(`Changed conversation filter to: ${detail.filter}`);
+  }
   flashText();
 });
 
