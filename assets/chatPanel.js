@@ -8,7 +8,7 @@ let conversationIdKeyName = "boostAiChatId";
 let conversationStartedTimestampKeyName = "boostAiChatTimestamp";
 let chatPanel = boostChatPanel({
   apiUrlBase: "https://partner20.boost.ai/api",
-  filterValues: ["Privat", "Bedrift"],
+  filterValues: "uio_it",
   conversationId: sessionStorage.getItem(conversationIdKeyName),
   pace: "supersonic",
 });
