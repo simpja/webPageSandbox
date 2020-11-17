@@ -8,7 +8,8 @@ let conversationIdKeyName = "boostAiChatId";
 let conversationStartedTimestampKeyName = "boostAiChatTimestamp";
 let chatPanel = boostChatPanel({
   apiUrlBase: "https://partner20.boost.ai/api",
-  filterValues: "uio_knutepunktet",
+  // Set inital filter value here. uio_it could be one
+  filterValues: "default",
   conversationId: sessionStorage.getItem(conversationIdKeyName),
   pace: "supersonic",
   title: "Avo Partner 20",
