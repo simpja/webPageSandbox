@@ -3,12 +3,24 @@
   src: url("fonts/avoFont.otf") format("opentype");
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-image: url("img/background2.jpg");
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: avoFont;
+  margin: 0;
+  height: 100%;
+}
+
+.flash {
+  font-size: 100px;
+  color: red;
+  transition: font-size 1s;
 }
 
 .modal_trigger {
@@ -30,6 +42,5 @@ body {
 #page-info {
   width: fit-content;
   padding: 5px;
-
   font-size: larger;
 }
